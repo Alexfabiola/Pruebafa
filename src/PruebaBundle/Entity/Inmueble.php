@@ -18,6 +18,8 @@ class Inmueble
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\ManyToOne(targetEntity="persona")
+     * @ORM\JoinColumn(name="persona_id", referencedColumnName="id")     
      */
     private $id;
 
