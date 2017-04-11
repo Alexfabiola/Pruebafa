@@ -45,7 +45,7 @@ class Persona
     /**
      * @var string
      *
-     * @ORM\Column(name="Direccion", type="string", nullable=false)
+     * @ORM\Column(name="Direccion", type="string", nullable=true)
      */
     private $direccion;
 
@@ -130,29 +130,5 @@ class Persona
     public function getEdad()
     {
         return $this->edad;
-    }
-
-    /**
-     * Set direccion
-     *
-     * @param string $direccion
-     *
-     * @return Persona
-     */
-    public function setDireccion($direccion)
-    {
-        $this->direccion = $direccion;
-
-        return $this;
-    }
-
-    /**
-     * Get direccion
-     *
-     * @return string
-     */
-    public function getDireccion()
-    {
-        return $this->direccion;
     }
 }

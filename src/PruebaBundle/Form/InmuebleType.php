@@ -6,14 +6,14 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PersonaType extends AbstractType
+class InmuebleType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')->add('apellido')->add('edad')->add('direccion');
+        $builder->add('ubicacion')->add('tipo')->add('registro')->add('impuesto');
     }
     
     /**
@@ -22,7 +22,7 @@ class PersonaType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'PruebaBundle\Entity\Persona'
+            'data_class' => 'PruebaBundle\Entity\Inmueble'
         ));
     }
 
@@ -31,7 +31,7 @@ class PersonaType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'pruebabundle_persona';
+        return 'pruebabundle_inmueble';
     }
 
 

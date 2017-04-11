@@ -1,39 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Persona</h1>
+    <h1>Inmueble</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ persona.id }}</td>
+                <td>{{ inmueble.id }}</td>
             </tr>
             <tr>
-                <th>Nombre</th>
-                <td>{{ persona.nombre }}</td>
+                <th>Ubicacion</th>
+                <td>{{ inmueble.ubicacion }}</td>
             </tr>
             <tr>
-                <th>Apellido</th>
-                <td>{{ persona.apellido }}</td>
+                <th>Tipo</th>
+                <td>{{ inmueble.tipo }}</td>
             </tr>
             <tr>
-                <th>Edad</th>
-                <td>{{ persona.edad }}</td>
+                <th>Registro</th>
+                <td>{{ inmueble.registro }}</td>
             </tr>
             <tr>
-                <th>Direccion</th>
-                <td>{{ persona.direccion }}</td>
+                <th>Impuesto</th>
+                <td>{{ inmueble.impuesto }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('persona_index') }}">Back to the list</a>
+            <a href="{{ path('inmueble_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('persona_edit', { 'id': persona.id }) }}">Edit</a>
+            <a href="{{ path('inmueble_edit', { 'id': inmueble.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
