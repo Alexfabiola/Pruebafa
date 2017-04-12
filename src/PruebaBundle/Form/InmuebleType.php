@@ -5,6 +5,7 @@ namespace PruebaBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class InmuebleType extends AbstractType
 {
@@ -13,7 +14,16 @@ class InmuebleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('ubicacion')->add('tipo')->add('registro')->add('impuesto');
+        $builder
+            ->add('ubicacion')
+            ->add('tipo')
+            ->add('registro')
+            ->add('impuesto')
+            ->add('Persona', 
+                EntityType::class, array( 'class' => 'PruebaBundle:Persona', 
+                                          'choice_label' => 'nombre',
+                                          'multiple' => false,
+                                       ));
     }
     
     /**
@@ -33,6 +43,5 @@ class InmuebleType extends AbstractType
     {
         return 'pruebabundle_inmueble';
     }
-
 
 }

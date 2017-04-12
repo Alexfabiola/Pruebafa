@@ -53,7 +53,7 @@ class Inmueble
 
     /**
      * Many Users have One Address.
-     * @ORM\ManyToOne(targetEntity="Persona")
+     * @ORM\ManyToOne(targetEntity="persona")
      * @ORM\JoinColumn(name="persona_id", referencedColumnName="id")
      */
     private $persona;
@@ -163,28 +163,5 @@ class Inmueble
     {
         return $this->impuesto;
     }
-
-    /**
-     * Set persona
-     *
-     * @param \PruebaBundle\Entity\persona $persona
-     *
-     * @return Inmueble
-     */
-    public function setPersona(\PruebaBundle\Entity\persona $persona = null)
-    {
-        $this->persona = $persona;
-
-        return $this;
-    }
-
-    /**
-     * Get persona
-     *
-     * @return \PruebaBundle\Entity\persona
-     */
-    public function getPersona()
-    {
-        return $this->persona;
-    }
 }
+

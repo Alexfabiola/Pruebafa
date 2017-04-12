@@ -155,4 +155,9 @@ class Persona
     {
         return $this->direccion;
     }
+
+    public function __toString()
+    {
+        return (string) $this->getNombre();
+    }
 }
