@@ -52,7 +52,7 @@ class Inmueble
     private $impuesto;
 
     /**
-     * Many Users have One Address.
+     * Many Inmubles have One Persona.
      * @ORM\ManyToOne(targetEntity="Persona")
      * @ORM\JoinColumn(name="persona_id", referencedColumnName="id")
      */
@@ -186,5 +186,10 @@ class Inmueble
     public function getPersona()
     {
         return $this->persona;
+    }
+    
+    public function __toString()
+    {
+        return (string) $this->getUbicacion();
     }
 }
