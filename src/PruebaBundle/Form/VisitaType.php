@@ -16,7 +16,6 @@ class VisitaType extends AbstractType
     {
         $builder->add('fecha')
                 ->add('visitante', EntityType::class, array( 'class' => 'PruebaBundle:Persona',
-                                                             'choice_label' => 'nombre',
                                                              'multiple' => false,))
                 ->add('inmueble', EntityType::class, array( 'class' => 'PruebaBundle:Inmueble', 
                                                              'choice_label' => 'ubicacion',

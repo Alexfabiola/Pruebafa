@@ -158,6 +158,6 @@ class Persona
 
     public function __toString()
     {
-        return (string) $this->getNombre();
+        return (string) $this->getNombre().' '.$this->getApellido();
     }
 }
